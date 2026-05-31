@@ -65,9 +65,6 @@ AnimatorStateMachine:
     m_State: {fileID: 2608947780576752125}
     m_Position: {x: 200, y: 0, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 4664464356171180382}
-    m_Position: {x: 480, y: 100, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -6333029509289672097}
     m_Position: {x: 140, y: 280, z: 0}
   - serializedVersion: 1
@@ -129,32 +126,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 6b370e091cb262748a839d9b1892c6b9, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &4664464356171180382
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Jugador_F 1
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e4bde93fdc4ceba4bac012d7efc753db, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
