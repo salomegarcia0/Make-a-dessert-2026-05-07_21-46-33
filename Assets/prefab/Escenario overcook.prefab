@@ -29,7 +29,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5511528064032709298}
   - {fileID: 2735769393190173755}
   - {fileID: 8166539007775291255}
   - {fileID: 6443766450090137986}
@@ -112,6 +111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Suelo exterior
       objectReference: {fileID: 0}
+    - target: {fileID: 8708328167134726975, guid: ad00f5a49278aa744a7a50b6dd00230b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fbe4d9c6473024d4587479c5190179a1, type: 2}
     - target: {fileID: 9158688018565618081, guid: ad00f5a49278aa744a7a50b6dd00230b, type: 3}
       propertyPath: m_LocalScale.x
       value: 27.791834
@@ -126,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158688018565618081, guid: ad00f5a49278aa744a7a50b6dd00230b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.0965166
       objectReference: {fileID: 0}
     - target: {fileID: 9158688018565618081, guid: ad00f5a49278aa744a7a50b6dd00230b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -521,68 +524,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2130672766776311834, guid: 791aa6248426f754a9f3a1aaeb719ee7, type: 3}
   m_PrefabInstance: {fileID: 4971253695044835736}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5052688412027327783
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8049332381055832214}
-    m_Modifications:
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.443821
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.099999405
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.112199
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2355692625572813188, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-      propertyPath: m_Name
-      value: Suelo cocina Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
---- !u!4 &5511528064032709298 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 748196520957513621, guid: 2e058354641414e4c9239bb131c2438b, type: 3}
-  m_PrefabInstance: {fileID: 5052688412027327783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5836433779438811921
 PrefabInstance:
