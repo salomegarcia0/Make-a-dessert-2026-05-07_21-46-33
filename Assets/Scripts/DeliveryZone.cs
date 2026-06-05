@@ -2,22 +2,33 @@ using UnityEngine;
 
 public class DeliveryZone : MonoBehaviour
 {
-    // Esta función de Unity se ejecuta automáticamente cuando un objeto entra en su área de colisión (Trigger)
     private void OnTriggerEnter(Collider other)
     {
-        // Comprobamos si el objeto que acaba de entrar tiene el tag exacto "Plate"
-        if (other.CompareTag("Plate"))
+        if (other.CompareTag("plate"))
         {
-            EntregarCliente();
+            // Obtenemos el script Plate para saber qué comida lleva
+            Plate plateScript = other.GetComponent<Plate>();
+
+            if (plateScript != null)
+            {
+                // Llamamos a la función pasando el tipo de comida del plato
+                EntregarCliente(plateScript.foodOnPlate);
+
+                // Destruimos el objeto del plato físico porque ya fue entregado
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Debug.LogError("El objeto tiene el tag 'plate' pero no tiene el script Plate adjunto.");
+            }
         }
     }
 
-    // Tu función reservada para la lógica futura
-    private void EntregarCliente()
+    private void EntregarCliente(FoodType food)
     {
-        // Usamos un Debug.Log por ahora para confirmar que la detección funciona correctamente
-        Debug.Log("¡Plato colocado en la zona de entrega! Ejecutando EntregarCliente...");
+        Debug.Log("Procesando entrega en el mostrador...");
         
-        // TODO: Aquí desarrollarás la lógica para evaluar el plato, sumar puntos, etc.
+        // Le enviamos la comida al administrador para que se la asigne al NPC correcto
+        OrderManager.Instance.DeliverFoodToNPCs(food);
     }
 }
