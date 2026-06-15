@@ -60,12 +60,12 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Make-a-dessert-2026-05-07_21-46-33.slnx"
+    "dotnet.defaultSolution": "Make-a-dessert-2026-05-07_21-46-33-2026-06-14-01-49-53.slnx"
 }
