@@ -7,7 +7,6 @@ TagManager:
   - Plate
   - Submit
   - plate
-  - Fridge
   layers:
   - Default
   - TransparentFX
