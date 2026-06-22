@@ -7,13 +7,14 @@ public class KinematicMovement : MonoBehaviour
     public float turnSpeed = 10f;
     
     private CharacterController _controller;
-    //private Animator _animator;
+    private Animator _animator;
     private Matrix4x4 _isoMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
 
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        //_animator = GetComponent<Animator>();
+        //se busca el componente Animator en los hijos del objeto, asumiendo que el Animator está en un hijo 
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -33,9 +34,11 @@ public class KinematicMovement : MonoBehaviour
         // Transformamos el input para que coincida con la cámara isométrica (45°)
         Vector3 skewedInput = _isoMatrix.MultiplyPoint3x4(input.normalized);
 
-        //Magnitud del moviento al Animator
-        //_animator.SetFloat("Speed", input.magnitude);
-        //Vector3 skewedInput = input.normalized; // Sin transformación para movimiento directo
+        if (_animator != null)
+        {
+            // Actualiza el parámetro de velocidad en el Animator
+            _animator.SetFloat("Speed", input.magnitude*speed);
+        }
 
         if (input != Vector3.zero)
         {
@@ -48,12 +51,11 @@ public class KinematicMovement : MonoBehaviour
         }
     }
 
-    //void CheckedInteraction()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.E))
-    //    {
-    //        // Aquí puedes implementar la lógica para interactuar con objetos cercanos
-    //        Debug.Log("Interacción activada");
-    //    }
-    //}
+    public void TriggerInteraction()
+    {
+        if (_animator != null)
+        {
+            _animator.SetTrigger("Interact");
+        }
+    }
 }

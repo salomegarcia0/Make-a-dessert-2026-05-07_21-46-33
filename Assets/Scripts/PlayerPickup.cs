@@ -14,6 +14,13 @@ public class PlayerPickup : MonoBehaviour
     private GameObject heldObject;
     private Rigidbody heldObjectRb;
 
+    private KinematicMovement _movement;
+
+    void Start()
+    {
+        _movement = GetComponent<KinematicMovement>();
+    }
+
     void Update()
     {
         // Detecta si presionamos la tecla de interacción (E por defecto)
@@ -38,6 +45,7 @@ public class PlayerPickup : MonoBehaviour
 
         if (colliders.Length > 0)
         {
+            _movement.TriggerInteraction();
             // Agarramos el primer objeto válido que encontremos en el área
             heldObject = colliders[0].gameObject;
             heldObjectRb = heldObject.GetComponent<Rigidbody>();
