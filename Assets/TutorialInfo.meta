@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/TutorialInfo.meta
 guid: ba062aa6c92b140379dbc06b43dd3b9b
 folderAsset: yes
 DefaultImporter:
+=======
+guid: 687b7875ad56a6842b7d62e6242bd136
+PrefabImporter:
+>>>>>>> Stashed changes:Assets/Player/Boy/Player_M_Champ.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
