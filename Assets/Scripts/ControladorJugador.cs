@@ -13,8 +13,7 @@ public class KinematicMovement : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        //se busca el componente Animator en los hijos del objeto, asumiendo que el Animator está en un hijo 
-        _animator = GetComponentInChildren<Animator>();
+        
     }
 
     void Update()
@@ -34,10 +33,13 @@ public class KinematicMovement : MonoBehaviour
         // Transformamos el input para que coincida con la cámara isométrica (45°)
         Vector3 skewedInput = _isoMatrix.MultiplyPoint3x4(input.normalized);
 
+        //se busca el componente Animator en los hijos del objeto, asumiendo que el Animator está en un hijo 
+        _animator = GetComponentInChildren<Animator>();
+
         if (_animator != null)
         {
             // Actualiza el parámetro de velocidad en el Animator
-            _animator.SetFloat("Speed", input.magnitude*speed);
+            _animator.SetFloat("Speed", input.magnitude);
         }
 
         if (input != Vector3.zero)
